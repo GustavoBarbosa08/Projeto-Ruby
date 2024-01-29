@@ -13,25 +13,30 @@
 
   <div>
     <%= form.label :first_name, style: "display: block" %>
-    <%= form.text_field :first_name %>
+    <%= form.text_field :first_name, placeholder: "First Name", style: "display: block" %>
   </div>
 
   <div>
     <%= form.label :last_name, style: "display: block" %>
-    <%= form.text_field :last_name %>
+    <%= form.text_field :last_name, placeholder: "Last Name", style: "display: block" %>
   </div>
 
   <div>
     <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email, placeholder: "Email", style: "display: block" %>
   </div>
 
   <div>
     <%= form.label :phone, style: "display: block" %>
-    <%= form.text_field :phone %>
+    <%= form.text_field :phone, placeholder: "Phone", style: "display: block" %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%# <%= form.label :user_id, style: "display: block" %> 
+    <%= form.number_field :user_id, style: "display: block", value: current_usuario.id, id: :friend_usuario_id, type: :hidden %>
+  </div>
+<br>
+  <div>
+    <%= form.submit %>  
   </div>
 <% end %>
